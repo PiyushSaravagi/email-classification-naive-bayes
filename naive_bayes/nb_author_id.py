@@ -23,9 +23,9 @@ from email_preprocess import preprocess
 features_train, features_test, labels_train, labels_test = preprocess()
 
 ########################################################
-from sklearn.naive_bayes import MultinomialNB
+from sklearn.naive_bayes import GaussianNB
 
-classifier = MultinomialNB()
+classifier = GaussianNB()
 
 t0 = time()
 classifier.fit(features_test, labels_test)
